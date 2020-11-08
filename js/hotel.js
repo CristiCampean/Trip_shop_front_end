@@ -54,5 +54,5 @@ window.Hotel = {
  hotel.forEach( hotel=>hotelHtml+=Hotel.getHotels(hotel));
  $('.container. row :first-child').html(hotelHtml);
  }
-};
+}
 Hotel.getHotels();
