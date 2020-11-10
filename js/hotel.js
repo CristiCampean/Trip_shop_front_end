@@ -53,6 +53,17 @@ window.Hotel = {
  let hotelHtml = '';
  hotel.forEach( hotel=>hotelHtml+=Hotel.getHotels(hotel));
  $('.container .row .row:first-child').html(hotelHtml);
- }
+ },
+    bindEvents: function () {
+      $ ('.container .row .row:first-child').delegate('.btn btn-primary py-3 px-5', 'click', function (event)
+      {
+          event.preventDefault();
+
+          $(this).data('form-control');
+
+      });
+
+    }
 };
 Hotel.getHotels();
+Hotel.bindEvents();
