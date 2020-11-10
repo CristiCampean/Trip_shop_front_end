@@ -52,7 +52,7 @@ window.Hotel = {
  displayHotels: function (hotel) {
  let hotelHtml = '';
  hotel.forEach( hotel=>hotelHtml+=Hotel.getHotels(hotel));
- $('..container .row .row:first-child').html(hotelHtml);
+ $('.container .row .row:first-child').html(hotelHtml);
  }
 };
 Hotel.getHotels();
