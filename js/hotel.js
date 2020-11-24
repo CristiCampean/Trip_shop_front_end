@@ -3,8 +3,8 @@ window.Hotel = {
 
     getHotels:function () {
 
-        const destinationValue = $('#form-control ').val();
-        const locationValue = $('#form-control').val();
+        const destinationValue = $('#task-destination ').val();
+        const locationValue = $('#task-location').val();
         const priceValue = $('#range-slider').val();
 
         let body ={
@@ -70,8 +70,8 @@ window.Hotel = {
           {
              event.preventDefault();
 
-             $(this).data('form-control');
-
+             let buttonSearch = $(this).data('Search');
+             Hotel.bindEvents(buttonSearch);
 
         });
 
