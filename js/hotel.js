@@ -2,6 +2,17 @@ window.Hotel = {
     API_URL: "http://localhost:8086",
 
     getHotels:function () {
+
+        const destinationValue = $('#form-control ').val();
+        const locationValue = $('#form-control').val();
+        const priceValue = $('#range-slider').val();
+
+        let body ={
+            name:destinationValue,
+            city:locationValue,
+            price:priceValue
+        }
+
         $.ajax({
             url: Hotel.API_URL + "/hotels",
             method: "GET"
@@ -55,13 +66,14 @@ window.Hotel = {
  $('.container .row .row:first-child').html(hotelHtml);
  },
     bindEvents: function () {
-      $ ('.container .row .row:first-child').delegate('.btn btn-primary py-3 px-5', 'click', function (event)
-      {
-          event.preventDefault();
+        $ ('.container .row .row:first-child').delegate('.btn.btn-primary.py-3.px-5', 'click', function (event)
+          {
+             event.preventDefault();
 
-          $(this).data('form-control');
+             $(this).data('form-control');
 
-      });
+
+        });
 
     }
 };
