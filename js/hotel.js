@@ -14,7 +14,7 @@ window.Hotel = {
         }
 
         $.ajax({
-            url: Hotel.API_URL + "/hotels",
+            url: Hotel.API_URL + "/hotels" + "?name=destinationValue&city=locationValue&price=priceValue",
             method: "GET"
         }).done(function (response) {
           Hotel.displayHotels(response.content);
@@ -34,7 +34,7 @@ window.Hotel = {
 \t\t    \t\t\t\t\t<div class="text p-3">
 \t\t    \t\t\t\t\t\t<div class="d-flex">
 \t\t    \t\t\t\t\t\t\t<div class="one">
-\t\t\t\t    \t\t\t\t\t\t<h3><a href="hotel-single.html">Hotel, Italy</a></h3>
+\t\t\t\t    \t\t\t\t\t\t<h3><a href="">${hotel.name}</a></h3>
 \t\t\t\t    \t\t\t\t\t\t<p class="rate">
 \t\t\t\t    \t\t\t\t\t\t\t<i class="icon-star"></i>
 \t\t\t\t    \t\t\t\t\t\t\t<i class="icon-star"></i>
@@ -45,13 +45,13 @@ window.Hotel = {
 \t\t\t\t    \t\t\t\t\t\t</p>
 \t\t\t    \t\t\t\t\t\t</div>
 \t\t\t    \t\t\t\t\t\t<div class="two">
-\t\t\t    \t\t\t\t\t\t\t<span class="price per-price">$40<br><small>/night</small></span>
+\t\t\t    \t\t\t\t\t\t\t<span class="price per-price">$${hotel.price}<br><small>/night</small></span>
 \t\t    \t\t\t\t\t\t\t</div>
 \t\t    \t\t\t\t\t\t</div>
 \t\t    \t\t\t\t\t\t<p>Far far away, behind the word mountains, far from the countries</p>
 \t\t    \t\t\t\t\t\t<hr>
 \t\t    \t\t\t\t\t\t<p class="bottom-area d-flex">
-\t\t    \t\t\t\t\t\t\t<span><i class="icon-map-o"></i> Miami, Fl</span> 
+\t\t    \t\t\t\t\t\t\t<span><i class="icon-map-o"></i> Cluj, Ro</span> 
 \t\t    \t\t\t\t\t\t\t<span class="ml-auto"><a href="#">Book Now</a></span>
 \t\t    \t\t\t\t\t\t</p>
 \t\t    \t\t\t\t\t</div>
@@ -71,7 +71,7 @@ window.Hotel = {
              event.preventDefault();
 
              let buttonSearch = $(this).data('Search');
-             Hotel.bindEvents(buttonSearch);
+             Hotel.getHotels(buttonSearch);
 
         });
 
@@ -79,3 +79,4 @@ window.Hotel = {
 };
 Hotel.getHotels();
 Hotel.bindEvents();
+Hotel.getHotelsHtml()
