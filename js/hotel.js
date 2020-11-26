@@ -14,7 +14,7 @@ window.Hotel = {
         }
 
         $.ajax({
-            url: Hotel.API_URL + "/hotels" + "?name=destinationValue&city=locationValue&price=priceValue",
+            url: Hotel.API_URL + "/hotels?name="+ destinationValue +"&city="+ locationValue + "price"+priceValue,
             method: "GET"
         }).done(function (response) {
           Hotel.displayHotels(response.content);
