@@ -34,7 +34,7 @@ window.Hotel = {
 \t\t    \t\t\t\t\t<div class="text p-3">
 \t\t    \t\t\t\t\t\t<div class="d-flex">
 \t\t    \t\t\t\t\t\t\t<div class="one">
-\t\t\t\t    \t\t\t\t\t\t<h3><a href="">${hotel.name}</a></h3>
+\t\t\t\t    \t\t\t\t\t\t<h3><a href=""></a></h3>
 \t\t\t\t    \t\t\t\t\t\t<p class="rate">
 \t\t\t\t    \t\t\t\t\t\t\t<i class="icon-star"></i>
 \t\t\t\t    \t\t\t\t\t\t\t<i class="icon-star"></i>
@@ -45,7 +45,7 @@ window.Hotel = {
 \t\t\t\t    \t\t\t\t\t\t</p>
 \t\t\t    \t\t\t\t\t\t</div>
 \t\t\t    \t\t\t\t\t\t<div class="two">
-\t\t\t    \t\t\t\t\t\t\t<span class="price per-price">$${hotel.price}<br><small>/night</small></span>
+\t\t\t    \t\t\t\t\t\t\t<span class="price per-price"><br><small>/night</small></span>
 \t\t    \t\t\t\t\t\t\t</div>
 \t\t    \t\t\t\t\t\t</div>
 \t\t    \t\t\t\t\t\t<p>Far far away, behind the word mountains, far from the countries</p>
@@ -79,4 +79,3 @@ window.Hotel = {
 };
 Hotel.getHotels();
 Hotel.bindEvents();
-Hotel.getHotelsHtml()
